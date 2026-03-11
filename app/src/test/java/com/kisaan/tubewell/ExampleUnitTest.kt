@@ -1,4 +1,4 @@
-package com.example.kisaan
+package com.kisaan.tubewell
 
 import org.junit.Test
 

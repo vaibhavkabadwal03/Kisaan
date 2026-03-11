@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.kisaan"
+    namespace = "com.kisaan.tubewell"
     compileSdk {
         version = release(36)
     }
