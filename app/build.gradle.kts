@@ -11,7 +11,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.kisaan"
+        applicationId = "com.kisaan.tubewell"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
