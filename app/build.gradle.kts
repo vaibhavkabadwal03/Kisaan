@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.ksp)
-//    id("com.google.devtools.ksp")
+    alias(libs.plugins.hilt)
 }
 
 android {
@@ -68,4 +68,18 @@ dependencies {
     //Lifecycle
     implementation(libs.lifecycle.livedata)
     implementation(libs.lifecycle.viewmodel)
+
+    //Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    //retrofit
+    implementation(libs.retrofit.core)
+    implementation(libs.retrofit.converter.gson)
+
+    //OkHttp logging interceptor
+    implementation(libs.okhttp.logging)
+
+    //Android splashscreen
+    implementation(libs.androidx.core.splashscreen)
 }

@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "farmer")
 data class Farmer(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     val farmerId: Long,
     val name: String,
     val fatherName: String,

@@ -2,4 +2,9 @@
 <resources>
 
     <style name="Theme.Kisaan" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Kisaan.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/white</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_background</item>
+        <item name="postSplashScreenTheme">@style/Theme.Kisaan</item>
+    </style>
 </resources>

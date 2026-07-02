@@ -6,19 +6,19 @@ pluginManagement {
                 includeGroupByRegex("com\\.google.*")
                 includeGroupByRegex("androidx.*")
             }
-        }
-        mavenCentral()
-        gradlePluginPortal()
+        }           // Android plugins
+        mavenCentral()         // Kotlin plugins
+        gradlePluginPortal()   // Gradle plugins
     }
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        google()
-        mavenCentral()
+        google()                // Android libraries
+        mavenCentral()          // Other libraries
     }
 }
 
-rootProject.name = "Kisaan"
+rootProject.name = "KisaanApp"
 include(":app")
  

@@ -1,8 +1,6 @@
 package com.kisaan.tubewell.data
 
-import android.content.Context
 import androidx.room.Database
-import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.kisaan.tubewell.data.local.dao.FarmerDao
@@ -24,25 +22,8 @@ import com.kisaan.tubewell.utility.typeconverter.ListConverter
     exportSchema = false
 )
 @TypeConverters(ListConverter::class)
-abstract class Appdatabase : RoomDatabase() {
+abstract class AppDatabase : RoomDatabase() {
 
     abstract fun farmerDao(): FarmerDao
-    companion object {
-        @Volatile
-        private var INSTANCE: Appdatabase? = null
-
-        fun getDatabase(context: Context): Appdatabase {
-            return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    Appdatabase::class.java,
-                    "tubewell_db"
-                ).build()
-
-                INSTANCE = instance
-                instance
-            }
-        }
-    }
 
 }

@@ -10,7 +10,6 @@ data class Usage(
     val farmerId: Long,
     val tubewellId: Long,
     val isBorrowed: Boolean,
-    val borrowedFrom: List<Long> = emptyList(), // List of farmer IDs
     val startDateTime: String,
     val endDateTime: String,
     val durationMinutes: Int,
