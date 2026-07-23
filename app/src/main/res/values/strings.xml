@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">KisaanApp</string>
+    <string name="tubewell">TUBEWELL</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="splash_subtitle">Smart Water Management\nfor Better Tomorrow</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="father_name">Father Name</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
 </resources>

@@ -11,13 +11,13 @@ data class Farmer(
     val name: String,
     val fatherName: String,
     val phone: String,
-    val address: String,
-    val email: String,
-    val pictureUrl: String,
+    val address: String? = null,
+    val email: String? = null,
+    val pictureUrl: String? = null,
     val gramsabhaId: Long,
     val villageId: Long,
     val tubewellId: Long,
     val role: String,
-    val landArea: String,
+    val landArea: String? = null,
     val createdAt: String
 )

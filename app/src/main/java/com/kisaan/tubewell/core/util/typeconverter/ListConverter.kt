@@ -1,4 +1,4 @@
-package com.kisaan.tubewell.utility.typeconverter
+package com.kisaan.tubewell.core.util.typeconverter
 
 import androidx.room.TypeConverter
 

@@ -1,4 +1,4 @@
-package com.kisaan.tubewell.ui.theme
+package com.kisaan.tubewell.core.designsystem.typography
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

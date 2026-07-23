@@ -1,4 +1,4 @@
-package com.kisaan.tubewell.ui.theme
+package com.kisaan.tubewell.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

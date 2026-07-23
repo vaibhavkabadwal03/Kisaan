@@ -1,4 +1,4 @@
-package com.kisaan.tubewell.ui.theme
+package com.kisaan.tubewell.core.designsystem.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
@@ -9,6 +9,7 @@ import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
+import com.kisaan.tubewell.core.designsystem.typography.Typography
 
 private val DarkColorScheme = darkColorScheme(
     primary = Purple80,
