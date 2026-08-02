@@ -8,14 +8,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.kisaan.tubewell.R
 import com.kisaan.tubewell.core.designsystem.components.AppTextField
 import com.kisaan.tubewell.core.designsystem.components.PrimaryButton
-import com.kisaan.tubewell.core.util.showToast
 
 @Preview(showBackground = true, showSystemUi = true)
 @Composable
@@ -25,7 +23,6 @@ fun LoginContent(
     onPasswordChange: (String) -> Unit = {},
     onLoginClick: () -> Unit = {}
 ) {
-    val context = LocalContext.current
     Column(
         modifier = Modifier
             .fillMaxSize()

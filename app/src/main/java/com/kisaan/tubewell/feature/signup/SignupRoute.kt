@@ -5,7 +5,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
-import com.kisaan.tubewell.core.navigation.Routes
+import com.kisaan.tubewell.core.navigation.AppNavRoutes
 
 @Composable
 fun SignupRoute(navController: NavHostController, viewModel: SignupViewModel = hiltViewModel()) {
@@ -13,8 +13,8 @@ fun SignupRoute(navController: NavHostController, viewModel: SignupViewModel = h
     val state = viewModel.uiState.collectAsStateWithLifecycle()
     LaunchedEffect(state.value.isSuccess) {
         if (state.value.isSuccess) {
-            navController.navigate(Routes.OnBoardingScreen.route) {
-                popUpTo(Routes.SignUpScreen.route) {
+            navController.navigate(AppNavRoutes.OnBoarding) {
+                popUpTo(AppNavRoutes.SignUp) {
                     inclusive = true
                 }
             }

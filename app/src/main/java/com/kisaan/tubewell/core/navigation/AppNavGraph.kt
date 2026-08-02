@@ -1,30 +1,28 @@
 package com.kisaan.tubewell.core.navigation
 
 import androidx.compose.runtime.Composable
-import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.kisaan.tubewell.feature.login.LoginRoute
-import com.kisaan.tubewell.feature.login.LoginScreen
 import com.kisaan.tubewell.feature.signup.SignupRoute
 import com.kisaan.tubewell.feature.splash.SplashRoute
 
 @Composable
-fun KisaanNavGraph() {
+fun AppNavGraph() {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = Routes.SplashScreen.route
+        startDestination = AppNavRoutes.Splash
     )
     {
-        composable(Routes.SplashScreen.route) {
+        composable<AppNavRoutes.Splash> {
             SplashRoute(navController)
         }
-        composable(Routes.LoginScreen.route) {
+        composable<AppNavRoutes.Login> {
             LoginRoute(navController)
         }
-        composable(Routes.SignUpScreen.route){
+        composable<AppNavRoutes.SignUp> {
             SignupRoute(navController)
         }
     }

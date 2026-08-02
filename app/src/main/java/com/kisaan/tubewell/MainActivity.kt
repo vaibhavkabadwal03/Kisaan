@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.kisaan.tubewell.core.designsystem.theme.KisaanTheme
+import com.kisaan.tubewell.core.navigation.AppNavGraph
 import com.kisaan.tubewell.feature.login.LoginContent
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -16,7 +17,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             KisaanTheme {
                 //KisaanNavGraph()
-                LoginContent()
+//                LoginContent()
+                AppNavGraph()
             }
         }
     }

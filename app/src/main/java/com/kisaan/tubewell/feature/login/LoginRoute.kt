@@ -13,7 +13,7 @@ fun LoginRoute(navController: NavHostController, viewModel: LoginViewModel = hil
         state = state.value,
         onMobileChange = viewModel::onMobileChange,
         onPasswordChange = viewModel::onPasswordChange,
-        onLoginClick = viewModel::onClick
+        onLoginClick = viewModel::onLoginClick
     )
 
 }

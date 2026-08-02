@@ -18,7 +18,7 @@ class LoginViewModel @Inject constructor() : ViewModel() {
     fun onPasswordChange(password: String) {
         _uiState.value = _uiState.value.copy(password = password)
     }
-    fun onClick() {
+    fun onLoginClick() {
         _uiState.value = _uiState.value.copy(isLoading = true)
     }
 

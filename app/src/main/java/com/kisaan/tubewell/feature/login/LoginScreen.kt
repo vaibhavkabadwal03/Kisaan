@@ -17,6 +17,8 @@ fun LoginScreen(
         }
 
         state.isLoading -> {
+
+            //show waiting dialog
              LoginContent(
                  state = state,
                  onMobileChange = onMobileChange,
