@@ -20,7 +20,7 @@ import com.kisaan.tubewell.R
 @Composable
 fun TitleBar(
     modifier: Modifier = Modifier,
-    title: Int,
+    title: String? = null,
     subtitle: String? = null,
     onBackClick: (() -> Unit)? = null,
     backgroundColor: Color = MaterialTheme.colorScheme.primary,

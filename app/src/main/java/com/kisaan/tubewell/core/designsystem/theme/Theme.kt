@@ -18,7 +18,8 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
+    primary = Blue,
+    onPrimary = White,
     secondary = PurpleGrey40,
     tertiary = Pink40
 
@@ -37,7 +38,8 @@ private val LightColorScheme = lightColorScheme(
 fun KisaanTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    //Changed the dynamic color to false so that it can use my theme colors and not the default one provided by the library
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {

@@ -19,7 +19,7 @@ import androidx.compose.ui.unit.sp
 import com.kisaan.tubewell.core.designsystem.theme.PurpleGrey40
 
 @Composable
-fun ComponentTextField(
+fun AppTextField(
     label: String,
     value: String,
     onValueChange: (String) -> Unit,

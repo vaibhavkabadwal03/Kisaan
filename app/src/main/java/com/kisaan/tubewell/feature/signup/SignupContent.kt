@@ -14,18 +14,17 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.kisaan.tubewell.R
 import com.kisaan.tubewell.core.designsystem.components.KisaanCurvedSurface
 import com.kisaan.tubewell.core.designsystem.components.SegmentedControl
-import com.kisaan.tubewell.core.designsystem.components.FormField
+import com.kisaan.tubewell.core.designsystem.components.AppTextField
 import com.kisaan.tubewell.core.designsystem.components.TitleBar
-
+import com.kisaan.tubewell.core.designsystem.theme.Green
 @Composable
 fun SignupContent(
     state: SignupUIState = SignupUIState(),
@@ -41,7 +40,7 @@ fun SignupContent(
     Column(modifier = Modifier.fillMaxSize()) {
         // Top App Bar — Green
         TitleBar(
-            title = R.string.register,
+            title = stringResource(R.string.register),
             subtitle = "",
         )
 
@@ -59,40 +58,43 @@ fun SignupContent(
 
                 // Segmented Control
                 SegmentedControl(
-                    tabs = listOf(R.string.login.toString(), R.string.register.toString()),
+                    tabs = listOf(
+                        stringResource(R.string.login),
+                        stringResource(R.string.register)
+                    ),
                     selectedIndex = selectedTabIndex,
                     onTabSelected = onTabSelected,
                     modifier = Modifier.fillMaxWidth()
                 )
 
                 // Form Fields
-                FormField(
-                    label = R.string.full_name,
+                AppTextField(
+                    label = stringResource(R.string.full_name),
                     value = state.fullName,
                     onValueChange = onFullNameChange
                 )
 
-                FormField(
-                    label = R.string.father_name,
+                AppTextField(
+                    label = stringResource(R.string.father_name),
                     value = state.fatherName,
                     onValueChange = onFatherNameChange
                 )
 
-                FormField(
-                    label = R.string.mobile_number,
+                AppTextField(
+                    label = stringResource(R.string.mobile_number),
                     value = state.mobile,
                     onValueChange = onMobileChange,
                     keyboardType = KeyboardType.Phone
                 )
 
-                FormField(
-                    label = R.string.password,
+                AppTextField(
+                    label = stringResource(R.string.password),
                     value = state.password,
                     onValueChange = onPasswordChange
                 )
 
-                FormField(
-                    label = R.string.confirm_password,
+                AppTextField(
+                    label = stringResource(R.string.confirm_password),
                     value = state.confirmPassword,
                     onValueChange = onConfirmPasswordChange
                 )
@@ -107,11 +109,12 @@ fun SignupContent(
                 .height(56.dp),
             shape = RoundedCornerShape(0.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = Color(R.color.green)
-            )
+                containerColor = Green
+            ),
+            enabled = false
         ) {
             Text(
-                text = R.string.register.toString(),
+                text = stringResource(R.string.register),
                 fontSize = 16.sp,
                 fontWeight = FontWeight.SemiBold
             )

@@ -19,7 +19,7 @@ fun SplashRoute(
 
         when (state.value.destination) {
             SplashDestination.LOGIN -> {
-                navController.navigate(Routes.LoginScreen.route) {
+                navController.navigate(Routes.SignUpScreen.route) {
                     popUpTo(Routes.SplashScreen.route) {
                         inclusive = true
                     }

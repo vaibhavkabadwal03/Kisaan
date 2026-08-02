@@ -5,7 +5,8 @@ import com.kisaan.tubewell.core.designsystem.components.ErrorContent
 
 @Composable
 fun LoginScreen(
-    state: LoginUiState, onUsernameChange: (String) -> Unit,
+    state: LoginUiState,
+    onMobileChange: (String) -> Unit,
     onPasswordChange: (String) -> Unit,
     onLoginClick: () -> Unit
 ) {
@@ -16,12 +17,19 @@ fun LoginScreen(
         }
 
         state.isLoading -> {
-            LoginContent(
-                state = state,
-                onUsernameChange = onUsernameChange,
-                onPasswordChange = onPasswordChange,
-                onLoginClick = onLoginClick
-            )
+             LoginContent(
+                 state = state,
+                 onMobileChange = onMobileChange,
+                 onPasswordChange = onPasswordChange,
+                 onLoginClick = onLoginClick
+             )
         }
+
+        else -> LoginContent(
+            state = state,
+            onMobileChange = onMobileChange,
+            onPasswordChange = onPasswordChange,
+            onLoginClick = onLoginClick
+        )
     }
 }

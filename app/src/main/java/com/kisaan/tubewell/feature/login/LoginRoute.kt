@@ -11,7 +11,7 @@ fun LoginRoute(navController: NavHostController, viewModel: LoginViewModel = hil
     val state = viewModel.uiState.collectAsStateWithLifecycle()
     LoginScreen(
         state = state.value,
-        onUsernameChange = viewModel::onUsernameChange,
+        onMobileChange = viewModel::onMobileChange,
         onPasswordChange = viewModel::onPasswordChange,
         onLoginClick = viewModel::onClick
     )

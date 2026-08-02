@@ -12,7 +12,7 @@ import com.kisaan.tubewell.feature.splash.SplashRoute
 
 @Composable
 fun KisaanNavGraph() {
-    val navController: NavHostController = rememberNavController()
+    val navController = rememberNavController()
     NavHost(
         navController = navController,
         startDestination = Routes.SplashScreen.route
