@@ -47,7 +47,8 @@ fun LoginContent(
             stringResource(R.string.login),
             onLoginClick,
             modifier = Modifier.fillMaxWidth(),
-            enabled = state.mobile.isNotBlank() && state.password.isNotBlank()
+            enabled = state.mobile.isNotBlank() && state.password.isNotBlank(),
+            isLoading = state.isLoading
         )
     }
 }
